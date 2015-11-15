@@ -3,5 +3,34 @@ body {
 }
 
 #header {
-	margin: 25%;
+	text-align: center;
+	color: white;
+	margin: 15% 25%;
+}
+
+#header h1 {
+	font-size: 72px;
+	font-family: roboto;
+}
+
+#header h3 {
+	font-family: roboto;
+}
+
+#header p {
+	font-family: roboto;
+}
+
+.button {
+	font-family: roboto;
+
+	padding-top: 0.25em;
+	margin: 1em;
+	float: left;
+	width: 173px;
+	height: 1.5em;
+	font-size: 29px;
+	background: white;
+	color: green;
+	box-shadow: 5px 5px 20px #727272;
 }
