@@ -12,7 +12,7 @@ var caption = '';
 var possibleCaptions = [
 	"To hack is not enough",
 	"Interdisciplinary Hackathon",
-	"Sprint 2016"
+	"Spring 2016"
 ];
 var currentCaptionIndex = 0;
 
