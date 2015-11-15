@@ -9,8 +9,10 @@ body {
 }
 
 #header h1 {
-	font-size: 72px;
+	font-size: 5em;
 	font-family: roboto;
+	font-weight: 300;
+	text-shadow: 2px 2px 10px #333;
 }
 
 #header h3 {
@@ -23,6 +25,8 @@ body {
 
 .dynamicText span {
 	font-size:2em;
+    text-shadow: 2px 2px 10px #333;
+    font-family: roboto;
 }
 
 .button {
