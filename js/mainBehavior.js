@@ -9,6 +9,12 @@
 // Vars for typing effect 
 var captionLength = 0;
 var caption = '';
+var possibleCaptions = [
+	"To hack is not enough",
+	"Interdisciplinary Hackathon",
+	"Sprint 2016"
+];
+var currentCaptionIndex = 0;
 
 // How long the transition from color to color should take
 var colorStageInterval = 3500;
@@ -21,23 +27,26 @@ $( document ).ready(function() {
     setInterval ('cursorAnimation()', 600);
     captionEl = $('#caption');
     
-    $('#test-typing').click(function(){
-        testTypingEffect();
-    });
-
-    $('#test-erasing').click(function(){
-        testErasingEffect();
-    });
+    setInterval ('cycleTypeCaption()', 5000);
 });
 
 // Functions for typing effect
-function testTypingEffect() {
-    caption = $('input#user-caption').val();
+function cycleTypeCaption() {
+	runTypingEffect();
+	setTimeout(cycleEraseCaption, 3000);
+}
+function cycleEraseCaption() {
+	runErasingEffect();
+}
+
+function runTypingEffect() {
+	currentCaptionIndex = (currentCaptionIndex + 1) % 3
+	caption = possibleCaptions[currentCaptionIndex];
     type();
 }
 
 function type() {
-    captionEl.html(caption.substr(0, captionLength++));
+    captionEl.html(possibleCaptions[currentCaptionIndex].substr(0, captionLength++));
     if(captionLength < caption.length+1) {
         setTimeout('type()', 50);
     } else {
@@ -46,14 +55,14 @@ function type() {
     }
 }
 
-function testErasingEffect() {
+function runErasingEffect() {
     caption = captionEl.html();
     captionLength = caption.length;
     if (captionLength>0) {
         erase();
     } else {
         $('#caption').html("You didn't write anything to erase, but that's ok!");
-        setTimeout('testErasingEffect()', 1000);
+        setTimeout('runErasingEffect()', 1000);
     }
 }
 

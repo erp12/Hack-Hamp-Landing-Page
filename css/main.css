@@ -21,6 +21,10 @@ body {
 	font-family: roboto;
 }
 
+.dynamicText span {
+	font-size:2em;
+}
+
 .button {
 	font-family: roboto;
 
