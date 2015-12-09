@@ -61,7 +61,6 @@ function runErasingEffect() {
     if (captionLength>0) {
         erase();
     } else {
-        $('#caption').html("You didn't write anything to erase, but that's ok!");
         setTimeout('runErasingEffect()', 1000);
     }
 }
@@ -94,6 +93,6 @@ function cycleBGcolor() {
 	}, colorStageInterval ).animate({
 		backgroundColor: "#E0EC5B"
 	}, colorStageInterval ).animate({
-		backgroundColor: "#F7B245"
+		backgroundColor: "#bcFF5b"
 	}, colorStageInterval );
 }
