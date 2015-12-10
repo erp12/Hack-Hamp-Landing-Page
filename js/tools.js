@@ -1,18 +1,70 @@
-// Switches the text of an html div
-var TextSwitcher = function (divId, listOfText) {
-	this.divId = divId;
-	this.listOfText = listOfText;
-	this.currentIndex = 0;
-	this.setText();
-};
+// BEGIN CODE FROM: http://jsfiddle.net/DerekL/x3edvp4t/ (Slightly modified for faster and less jumpy scroll animations)
 
-TextSwitcher.prototype.setText = function (index) {
-	this.currentIndex = index;
-	document.getElementById (this.divId).innerHTML = this.listOfText[this.currentIndex];
+function jump(h) {
+    var top = document.getElementById(h).offsetTop,
+        left = document.getElementById(h).offsetLeft;
+    var animator = createAnimator({
+        start: [0,window.scrollY],
+        end: [left, top],
+        duration: 300
+    }, function(vals){
+        //console.log(arguments);
+    	window.scrollTo(vals[0], vals[1]);
+    });
+    
+    //run
+    animator();
 }
 
 
-// Cycles through the text on a timed function
-TextSwitcher.prototype.timedTextSwitch = function (frequency) {
-	// TODO: fill in this text using a timed repeating JS call
+
+//Animator
+//Licensed under the MIT License
+function createAnimator(config, callback, done) {
+    if (typeof config !== "object") throw new TypeError("Arguement config expect an Object");
+
+    var start = config.start,
+        mid = $.extend({}, start), //clone object
+        math = $.extend({}, start), //precalculate the math
+        end = config.end,
+        duration = config.duration || 1000,
+        startTime, endTime;
+
+    //t*(b-d)/(a-c) + (a*d-b*c)/(a-c);
+    function precalculate(a, b, c, d) {
+        return [(b - d) / (a - c), (a * d - b * c) / (a - c)];
+    }
+
+    function calculate(key, t) {
+        return t * math[key][0] + math[key][1];
+    }
+
+    function step() {
+        var t = Date.now();
+        var val = end;
+        if (t < endTime) {
+            val = mid;
+            for (var key in mid) {
+                mid[key] = calculate(key, t);
+            }
+            callback(val);
+            requestAnimationFrame(step);
+        } else {
+            callback(val);
+            done && done();
+        }
+    }
+
+    return function () {
+        startTime = Date.now();
+        endTime = startTime + duration;
+
+        for (var key in math) {
+            math[key] = precalculate(startTime, start[key], endTime, end[key]);
+        }
+
+        step();
+    }
 }
+
+// END CODE FROM: http://jsfiddle.net/DerekL/x3edvp4t/ (Slightly modified for faster and less jumpy scroll animations)

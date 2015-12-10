@@ -1,9 +1,14 @@
 <head>
 	<title>HampHack</title>
 	<link rel = "stylesheet" href = "css/main.css" type = "text/css">
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,100' rel='stylesheet' type='text/css'>
+	<link rel = "stylesheet" href = "css/home_page.css" type = "text/css">
 	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script src="http://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
+	<script src="js/pxgradient-1.0.3.min.js"></script>
+	<script src="js/jquery.hover.transform.min.js"></script>
+	<link rel = "stylesheet" href = "css/jquery.hover.transform.css" type = "text/css">
+
+	<script src="js/tools.js"></script>
 
 	<!-- Bootstrap Stuff -->
 	<!-- Latest compiled and minified CSS -->
@@ -13,29 +18,88 @@
 
 </head>
 
-<body id="bg">
-	<div id = "header" class="vcenter">
-		<h1>HampHack</h1>
-		
-		<div class="dynamicText">
-			<span id="caption"></span><span id="cursor">|</span>
-		</div>
-		
-		<div id="btn-containter" class="container-fluid">
-			<div class="row">
-				<div class = "col-md-4 col-sm-12"></div>
-				<div class = "col-md-2 col-sm-12">
-					<button type="button" class="btn-hack-hamp">Register</button>
-				</div>
-				<div class = "col-md-2 col-sm-12">
-					<button type="button" class="btn-hack-hamp">Sponsor</button>
-				</div>
-				<div class = "col-md-4 col-sm-12"></div>
+<body>
+	<div id="top-section" class="container-fluid">
+		<div class="row hh-nav-bar">
+			<div class = "col-md-2">
+				<p class="title half-rainbow-1">Logo Here</p>
+			</div>
+			<div class = "col-md-7"></div>
+			<div class = "col-md-1">
+				<p class="title half-rainbow-2">Home</p>
+			</div>
+			<div class = "col-md-1">
+				<p class="title half-rainbow-1">About</p>
+			</div>
+			<div class = "col-md-1">
+				<p class="title half-rainbow-2">Contact</p>
 			</div>
 		</div>
-
+		<div class="row top-heading-row">
+			<div class = "col-md-12">
+				<h1 class="title">HampHack</h1>
+			</div>
+		</div>
+		<div class="row" id="taglines">
+			<div class = "col-md-12 vertical-align">
+				<h3 class="">Interdisciplinary Hackathon -- Spring 2016 -- To Hack Is Not Enough</h3>
+			</div>
+		</div>
+		<script type="text/javascript">
+		</script>
+		<div class="row" id="last-heading-row">
+			<div class = "col-md-4 col-sm-12"></div>
+			<div class = "col-md-2 col-sm-12">
+				<button type="button" class="btn-hack-hamp half-rainbow-1" onClick="jump('register')">Register</button>
+			</div>
+			<div class = "col-md-2 col-sm-12">
+				<button type="button" class="btn-hack-hamp half-rainbow-2" onClick="jump('sponsor')">Sponsor</button>
+			</div>
+			<div class = "col-md-4 col-sm-12"></div>
+		</div>
+	</div>
+	<div id="bottom-section" class="container-fluid">
+		<div class="row heading-row" id="register">
+			<div class="col-md-12 col-sm-12" style="background-color:#2A2727;">
+				<h1 class="rainbow-text">REGISTER</h1>
+			</div>
+		</div>
+		<div class="row cell-row" id="register">
+			<div class="col-md-4 col-sm-12 hh-cell" style="background-color:#F7B245;">
+				<div id="hacker-img" class="hh-cell-bg"></div>
+				<h2>Hackers</h2>
+				<p>Anyone who dwells into the art of exploring is a hacker. To open up things and learn new ways of how things work is hacking.</p>
+				<button type="button" class="btn-hack-hamp cell-btn">Register</button>
+			</div>
+			<div class="col-md-4 col-sm-12 hh-cell" style="background-color:#FC4A55;">
+				<div id="maker-img" class="hh-cell-bg"></div>
+				<h2>Makers</h2>
+				<p>Anyone who moulds the tangible things to best solve problems, is a maker.</p>
+			</div>
+			<div class="col-md-4 col-sm-12 hh-cell" style="background-color:#AE87B9;">
+				<div id="designer-img" class="hh-cell-bg"></div>
+				<h2>Designers</h2>
+				<p>The design is the main aspect of making solutions.</p>
+			</div>
+		</div>
+		<div class="row heading-row" id="sponsor">
+			<div class="col-md-12 col-sm-12" style="background-color:#2A2727;">
+				<h1 class="rainbow-text">SPONSOR</h1>
+			</div>
+		</div>
+		<div class="row cell-row">
+			<div class="col-md-6 col-sm-12 hh-cell" style="background-color:#7BC7C7;">
+				<div id="funding-img" class="hh-cell-bg"></div>
+				<h2>Funding</h2>
+				<p>Support this amazing event with a monitary contribution.</p>
+			</div>
+			<div class="col-md-6 col-sm-12 hh-cell" style="background-color:#5bfc9e;">
+				<div id="resource-img" class="hh-cell-bg"></div>
+				<h2>Resource</h2>
+				<p>Support this amazing event by providing crucial resources such as hardware, food, or on-site mentorship to participants.</p>
+			</div>
+		</div>
 	</div>
 
-
-	<script src="js/mainBehavior.js"></script>
+	<script src="js/HomePageBehavior.js"></script>
 </body>

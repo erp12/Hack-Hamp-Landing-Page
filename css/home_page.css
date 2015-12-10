@@ -1,0 +1,124 @@
+body {
+	background: #2A2727;
+	padding:0px;
+	margin:0px;
+}
+
+.hh-nav-bar p {
+	margin-top: 2%;
+	text-align: center;
+
+	font-size: 2em;
+	font-family: roboto;
+	font-weight: 300;
+}
+
+h1.title {
+	color:white;
+	font-size: 7em;
+	font-family: roboto;
+	font-weight: 300;
+	text-align: center;
+	margin-top: 10%;
+}
+
+#taglines h3 {
+	color:white;
+	text-align: center;
+	height:10%;
+}
+
+#top-section {
+	height: 95%;
+	background-color: #2A2727;
+}
+
+#bottom-section div.cell-row{
+	height: 50%;
+}
+
+.heading-row#sponsor {
+	height:10px;
+}
+.heading-row h1{
+	text-align: center;
+	font-family: roboto;
+	font-weight: 300;
+}
+
+div.hh-cell {
+	height: 100%;
+}
+
+div.hh-cell h2 {
+	position: relative;
+	text-align: center;
+	color: white;
+	font-size: 6em;
+	font-family: roboto;
+	font-weight: 300;
+	z-index: 10;
+
+	margin-top: 25%;
+    text-shadow: 2px 2px #2A2727;
+
+    -webkit-transition: margin-top 0.5s; /* Safari 3.1 to 6.0 */
+    transition: margin-top 0.5s;
+
+    pointer-events: none;
+}
+div.hh-cell p {
+	position: relative;
+	text-align: center;
+	color: white;
+	font-size: 2em;
+	font-family: roboto;
+	font-weight: 500;
+	z-index: 10;
+
+    text-shadow: 1px 1px #2A2727;
+
+  	opacity: 0;
+
+    pointer-events: none;
+}
+
+div.hh-cell-bg {
+	position: absolute;
+	left:0;
+	height: 100%;
+	width: 100%;
+	background-size:cover;
+	opacity:0.7;
+	z-index: 10;
+}
+
+#hacker-img {
+	background-image: url('../img/Hacker.JPG');
+}
+#maker-img {
+	background-image: url('../img/Maker.JPG');
+}
+#designer-img {
+	background-image: url('../img/Designer.JPG');
+}
+
+#funding-img {
+	background-image: url('../img/Flowers.JPG');
+}
+
+#resource-img {
+	background-image: url('../img/Resource.JPG');
+}
+
+button.cell-btn {
+	opacity:0;
+	position:absolute;
+	bottom:10;
+	width:50%;
+	left:25%;
+
+	text-shadow: 2px 2px #2A2727;
+	z-index: 10;
+}
+
