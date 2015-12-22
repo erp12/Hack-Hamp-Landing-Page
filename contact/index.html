@@ -1,0 +1,78 @@
+<head>
+	<title>Contact</title>
+	<link rel = "stylesheet" href = "../css/main.css" type = "text/css">
+	<link rel = "stylesheet" href = "../css/home_page.css" type = "text/css">
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="http://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
+	<script src="../js/pxgradient-1.0.3.min.js"></script>
+	<script src="../js/jquery.hover.transform.min.js"></script>
+	<link rel = "stylesheet" href = "css/main.css" type = "text/css">
+	<link rel = "stylesheet" href = "../css/jquery.hover.transform.css" type = "text/css">
+
+	<script src="../js/tools.js"></script>
+	<script language="JavaScript" src="scripts/gen_validatorv31.js" type="text/javascript"></script>
+
+	<!-- Bootstrap Stuff -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div id="top-section" class="container-fluid">
+		<div class="row hh-nav-bar">
+			<div class = "col-md-2">
+				<p class="title half-rainbow-1">Logo Here</p>
+			</div>
+			<div class = "col-md-7"></div>
+			<div class = "col-md-1">
+				<a href = "../">
+					<p class="title half-rainbow-2">Home</p>
+				</a>
+			</div>
+			<div class = "col-md-1">
+				<a href = "../about">
+					<p class="title half-rainbow-1">About</p>
+				</a>
+			</div>
+			<div class = "col-md-1">
+				<a href = "">
+					<p class="title half-rainbow-2">Contact</p>
+				</a>
+			</div>
+		</div>
+
+	<!--Code from: http://www.html-form-guide.com/contact-form/php-email-contact-form.html -->
+	<div id = "contact-form">
+		<h1>Send us a Message</h1>
+
+		<form method="post" name="contactform"
+	action="contact-form-handler.php">
+		    Your Name:
+		    <br>
+		    <input type="text" name="name">
+		 	<br>
+		    Email Address:
+		    <br>
+		    <input type="text" name="email">
+		 	<br>
+		    Message:
+		    <br><br>
+		    <textarea name="message"></textarea>
+ 			<br>
+    		<input type="submit" value="Send">
+		</form>   
+
+	</div>
+
+	<script language="JavaScript">
+		var frmvalidator  = new Validator("contactform");
+		frmvalidator.addValidation("name","req","Please provide your name");
+		frmvalidator.addValidation("email","req","Please provide your email");
+		frmvalidator.addValidation("email","email",
+  		"Please enter a valid email address");
+	</script>
+
+
+</body>
