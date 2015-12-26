@@ -1,0 +1,14 @@
+#contact-form {
+	font-size: 20px;
+	color: white;
+	margin: 2em 20em;
+}
+
+#contact-form input, textarea {
+	margin: 2em 0;
+	background-color: #337ab7;
+}
+
+#contact-form h1 {
+	margin-bottom: 1em;
+}
