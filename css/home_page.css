@@ -4,13 +4,9 @@ body {
 	margin:0px;
 }
 
-.hh-nav-bar p {
-	margin-top: 2%;
-	text-align: center;
-
-	font-size: 2em;
-	font-family: roboto;
-	font-weight: 300;
+nav#hh-navbar {
+	margin:0px;
+	background-color: #2A2727;
 }
 
 h1.title {
@@ -29,7 +25,7 @@ h1.title {
 }
 
 #top-section {
-	height: 95%;
+	height: 87%;
 	background-color: #2A2727;
 }
 

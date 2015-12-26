@@ -20,48 +20,53 @@
 </head>
 
 <body>
-	<div id="top-section" class="container-fluid">
-		<div class="row hh-nav-bar">
-			<div class = "col-md-2">
-				<p class="title half-rainbow-1">Logo Here</p>
-			</div>
-			<div class = "col-md-7"></div>
-			<div class = "col-md-1">
-				<a href = "../">
-					<p class="title half-rainbow-2">Home</p>
+	<!-- Begin Nav Bar -->
+	<nav class="navbar navbar-inverse" id="hh-navbar">
+		<div class="container-fluid">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#hh-nav-links" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+
+			<div class="navbar-header">
+				<a class="navbar-brand rainbow-text" href="#">
+					LogoHere
 				</a>
 			</div>
-			<div class = "col-md-1">
-				<a href = "../about">
-					<p class="title half-rainbow-1">About</p>
-				</a>
-			</div>
-			<div class = "col-md-1">
-				<a href = "">
-					<p class="title half-rainbow-2">Contact</p>
-				</a>
+			<div class="collapse navbar-collapse" id="hh-nav-links">
+				<ul class="nav navbar-nav navbar-right ">
+					<li><a href=".." class="half-rainbow-2">Home</a></li>
+					<li><a href="../about" class="half-rainbow-1">About</a></li>
+					<li><a href="#" class="half-rainbow-2">FAQ</a></li>
+					<li><a href="contact" class="half-rainbow-1">Contact</a></li>
+				</ul>
 			</div>
 		</div>
+	</nav>
+	<!-- End Nav Bar -->
+	<div id="top-section" class="container-fluid">
 
-	<!--Code from: http://www.html-form-guide.com/contact-form/php-email-contact-form.html -->
-	<div id = "contact-form">
-		<h1>Send us a Message</h1>
+		<!--Code from: http://www.html-form-guide.com/contact-form/php-email-contact-form.html -->
+		<div id = "contact-form">
+			<h1>Send us a Message</h1>
 
-		<form method="post" name="contactform"
-	action="contact-form-handler.php">
-		    Your Name:
-		    <br>
-		    <input type="text" name="name">
-		 	<br>
-		    Email Address:
-		    <br>
-		    <input type="text" name="email">
-		 	<br>
-		    Message:
-		    <br><br>
-		    <textarea name="message"></textarea>
- 			<br>
-    		<input type="submit" value="Send">
+			<form method="post" name="contactform"
+			action="contact-form-handler.php">
+			Your Name:
+			<br>
+			<input type="text" name="name">
+			<br>
+			Email Address:
+			<br>
+			<input type="text" name="email">
+			<br>
+			Message:
+			<br><br>
+			<textarea name="message"></textarea>
+			<br>
+			<input type="submit" value="Send">
 		</form>   
 
 	</div>
@@ -71,8 +76,8 @@
 		frmvalidator.addValidation("name","req","Please provide your name");
 		frmvalidator.addValidation("email","req","Please provide your email");
 		frmvalidator.addValidation("email","email",
-  		"Please enter a valid email address");
+			"Please enter a valid email address");
 	</script>
 
-
+	<script src="../js/HackHampJQueryStyle.js"></script>
 </body>
